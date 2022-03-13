@@ -59,7 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let cardsChosen = []
     let cardsChosenId = []
     let cardsWon = []
-    let title = document.getElementById('title')
+    let title = document.getElementById('title');
+
   
     //create your board
     function createBoard() {
@@ -81,10 +82,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if(optionOneId == optionTwoId) {
         cards[optionOneId].setAttribute('src', 'img/starz.png')
         cards[optionTwoId].setAttribute('src', 'img/starz.png')
-        alert('You have clicked the same image!')
+        title.textContent = 'You clicked the same image!';
       }
       else if (cardsChosen[0] === cardsChosen[1]) {
-        alert('You found a match')
+        title.textContent = 'You found a match!'
         cards[optionOneId].setAttribute('src', 'img/square.png')
         cards[optionTwoId].setAttribute('src', 'img/square.png')
         cards[optionOneId].removeEventListener('click', flipCard)
@@ -93,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         cards[optionOneId].setAttribute('src', 'img/starz.png')
         cards[optionTwoId].setAttribute('src', 'img/starz.png')
-        alert('Sorry, try again')
+        title.textContent = `That's not a match! Please try again! :)`
       }
       cardsChosen = []
       cardsChosenId = []

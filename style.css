@@ -1,6 +1,26 @@
+body {
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
 .grid {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     height: 300px;
     width: 400px;
 }
+
+h2, h3 {
+    text-align: center;
+    color: white;
+}
+
+h3 {
+    margin-top: 6.25rem;
+}
+
